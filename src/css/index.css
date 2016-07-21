@@ -1,0 +1,66 @@
+/*-----banner------*/
+.banner{
+	width: 100%;
+	height: 470px;
+	position: relative;
+}
+.banner ul{
+	overflow: hidden;
+	height: 470px;
+}
+.banner ul li{
+	display: none;
+	position: relative;
+}
+.banner ul li.active{
+	display: block;
+}
+.banner img{
+	width: 100%;
+	height: 470px;
+}
+.banner .prev,.banner .next{
+	position: absolute;
+	top:50%;
+	height:60px;
+	width: 30px;
+	background: #000;
+	z-index: 1;
+	margin-top:-30px ;
+	opacity: 0.8;
+}
+.banner .prev,.banner .next{
+	display: block;
+	line-height: 60px;
+	text-align: center;
+	font-size: 40px;
+	color: #fff;
+	display: none;
+	cursor: pointer;
+}
+.banner .prev{
+	left:247px;
+}
+.banner .next{
+	right:244px;
+}
+.banner .doc{
+	height: 8px;
+	width: 130px;
+	position: absolute;
+	left:50%;
+	bottom:22px;
+	margin-left:-62px ;
+	z-index: 3;
+}
+.banner em{
+	display: block;
+	height: 8px;
+	width:30px;
+	margin-right: 1px;
+	float: left;
+	background: #000;
+}
+.banner em.select{
+	background: #de014e;
+}

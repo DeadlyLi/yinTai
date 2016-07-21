@@ -1,0 +1,7 @@
+body {overflow-x:hidden;}
+a { color:#666; text-decoration:none; font-size:12px} 
+a:visited { color:#666; } 
+a:hover, a:active, a:focus {color:red; }
+em,i{font-style:normal} 
+.left{float: left;}
+.right{float: right;}
