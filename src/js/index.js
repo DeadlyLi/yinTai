@@ -9,7 +9,7 @@ $(function(){
 	//设置索引值
 	var index = 0;
 	//通过定时器设置图片轮播
-	var timer = setInterval(fnNext,1000);
+	var timer = setInterval(fnNext,3000);
 	//鼠标移进轮播停止，两个点击键出现
 	$ul.on('mouseover',function(){
 		clearInterval(timer);
@@ -17,7 +17,7 @@ $(function(){
 		$next.show();
 		//鼠标移出，轮播继续，两按键消失
 	}).on('mouseleave',function(){
-		timer = setInterval(fnNext,1000);
+		timer = setInterval(fnNext,3000);
 		$prev.hide();
 		$next.hide();
 	})

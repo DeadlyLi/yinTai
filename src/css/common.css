@@ -23,12 +23,44 @@
 	background: url(img/header.png) no-repeat -216px -51px;
 	width: 40px;
 }
+.header .wechat,.header .appphone{
+	width: 125px;
+	height:155px ;
+	background: #fff;
+	position: absolute;
+	left:6px;
+	top:0;
+	box-shadow: 2px 2px 3px #ccc;
+	z-index: 1;
+	display: none;
+}
+.header .appphone{
+	width: 140px;
+	height: 190px;
+}
+.header .wechat img{
+	margin: 10px 0 0 12px;
+}
+.header .appphone img{
+	margin: 5px 0 0 3px;
+}
+.header .wechat p,.header .appphone p{
+	padding-left:33px; 
+	background: url(img/header.png) no-repeat -218px -81px;
+	color: red;
+}
+.header .appphone p{
+	background: url(img/phone.png) no-repeat 12px 6px;
+}
 .header .sj{
 	background: url(img/sj.png) no-repeat 14px 6px;
 }
+.header .appphone i{
+	padding: 0 4px;
+}
 .header .head_right{
 	height: 34px;
-	width: 490px;
+	width: 500px;
 	margin-left:392px ;
 }
 .header span{
@@ -45,6 +77,36 @@
 }
 .header .head_right li{
 	padding: 0 12px 0 12px;
+	position: relative;
+}
+.myYt{
+	width: 60px;
+}
+.myYt ol{
+	position: absolute;
+	left:5px;
+	top:0;
+	background: #fff;	
+	box-shadow: 2px 2px 3px #ccc;
+	z-index: 1;
+	display: none;
+}
+.myYt ol p{
+	margin-left:8px ;
+	color: red;
+	position: relative;
+}
+.myYt ol dd{
+	width:75px;
+	margin-left:8px ;
+	line-height: 30px;
+	border-bottom:1px solid #ccc ;
+}
+.myYt ol dd a:hover{
+	text-decoration: underline;
+}
+.myYt ol .jifen{
+	border:0;
 }
 /*-----下拉符号------*/
 .arrow {
@@ -55,16 +117,24 @@
         border-left-color: transparent;
         border-right-color: transparent;
         border-bottom: none;
-    }
+}
 .sj .arrow{
 	left: 90px;
 }  
 .arrow.inner {
-        border-top-color: #eeeeee;
-        top: 14px;
-    }
-    
-    
+    border-top-color: #eeeeee;
+     top: 14px;
+   }
+ .header .wechat p .arrow,.header .appphone p .arrow,.myYt ol p .arrow{
+ 	border-top: 5px solid red;
+ } 
+ .header .wechat p .arrow.inner,.header .appphone p .arrow.inner,.myYt ol p .arrow.inner{
+  	border-top-color: #fff;
+}
+.myYt ol p .arrow{
+	left:55px
+}
+/*-----------*/    
 .ad{
 	width: 100%;
 }
