@@ -64,4 +64,12 @@ $(function(){
 		$li.eq(index).show().siblings('li').hide();
 		$doc.removeClass('select').eq(index).addClass('select');
 	}
+	
+	//鼠标移进轮播图上的图片 向左动
+	var $bg = $('.banner .lunboBg');
+	$bg.on('mouseenter',function(){
+		$(this).stop(true).animate({'right':42});
+	}).on('mouseleave',function(){
+		$(this).stop(true).animate({'right':30});
+	})
 })

@@ -16,12 +16,19 @@
 .header .yintai{
 	background: url(img/header.png) no-repeat -216px 7px;
 }
+
 .header .yintai:hover{
 	background: url(img/header.png) no-repeat -216px -21px;
 }
 .header .weixin{
 	background: url(img/header.png) no-repeat -216px -51px;
 	width: 40px;
+}
+.header .weixin a{
+	display: block;
+	width: 60px;
+	height: 30px;
+	background: url(img/head_x.png) no-repeat 30px 15px;
 }
 .header .wechat,.header .appphone{
 	width: 125px;
@@ -41,6 +48,12 @@
 .header .wechat img{
 	margin: 10px 0 0 12px;
 }
+.header .wechat a{
+	background: url(img/xia_h.png) no-repeat 33px 15px;
+	display: block;
+	width: 60px;
+	height: 30px;
+}
 .header .appphone img{
 	margin: 5px 0 0 3px;
 }
@@ -51,9 +64,22 @@
 }
 .header .appphone p{
 	background: url(img/phone.png) no-repeat 12px 6px;
+	
+}
+.header .appphone p a{
+	background: url(img/xia_h.png) no-repeat 53px 15px;
+	display: block;
+	width: 68px;
+	height: 30px;
 }
 .header .sj{
 	background: url(img/sj.png) no-repeat 14px 6px;
+}
+.header .sj a{
+	display: block;
+	width: 68px;
+	height: 30px;
+	background: url(img/head_x.png) no-repeat 54px 15px;
 }
 .header .appphone i{
 	padding: 0 4px;
@@ -82,6 +108,13 @@
 .myYt{
 	width: 60px;
 }
+.myYt  span{
+	margin-top:0 ;
+	display: block;
+	width: 68px;
+	height: 30px;
+	background: url(img/head_x.png) no-repeat 54px 15px;
+}
 .myYt ol{
 	position: absolute;
 	left:5px;
@@ -95,6 +128,7 @@
 	margin-left:8px ;
 	color: red;
 	position: relative;
+	background: url(img/xia_h.png) no-repeat 53px 15px;
 }
 .myYt ol dd{
 	width:75px;
@@ -109,9 +143,9 @@
 	border:0;
 }
 /*-----下拉符号------*/
-.arrow {
+/*.header .arrow {
         position: absolute;
-        top: 15px;
+        top: 13px;
         left: 65px;
         border: 5px solid #696365;
         border-left-color: transparent;
@@ -121,19 +155,19 @@
 .sj .arrow{
 	left: 90px;
 }  
-.arrow.inner {
+.header .arrow.inner {
     border-top-color: #eeeeee;
      top: 14px;
-   }
+  }
  .header .wechat p .arrow,.header .appphone p .arrow,.myYt ol p .arrow{
  	border-top: 5px solid red;
  } 
  .header .wechat p .arrow.inner,.header .appphone p .arrow.inner,.myYt ol p .arrow.inner{
   	border-top-color: #fff;
 }
-.myYt ol p .arrow{
+ .header .myYt ol p .arrow{
 	left:55px
-}
+}*/
 /*-----------*/    
 .ad{
 	width: 100%;
@@ -280,4 +314,105 @@
 }
 .nav i span{
 	padding: 0 6px;
+}
+.nav .menu ol li span{
+	font-size: 16px;
+	display: block;
+	float: left;
+	height: 40px;
+	width: 64px;
+	margin-top:2px ;
+	padding: 0 0 0 25px;
+}
+.nav .menu ol li a{
+	font-size: 12px;
+	height: 16px;
+	color: #fff;
+	display: block;
+	float: left;
+	width: 60px;
+	margin-top:2px ;
+}
+.nav .menu ol li em{
+	float: left;
+	color: #ccc;
+	display: block;
+	width: 1px;
+	height: 16px;
+	border-left: 1px solid #ccc ;
+	margin-top: 14px;
+	margin-right:6px ;
+}
+.nav .menu ol li p{
+	width: 42px;
+	height: 46px;
+	float: right;
+	background: url(img/right.png) no-repeat 24px 18px;
+	z-index: 2;
+}
+.nav .menu ol li:hover p{
+	background: #e5004f;
+}
+.nav .menu .mp span{
+	background: url(img/mp.png) no-repeat 16px 13px;
+}
+.nav .menu .mp:hover span{
+	background: url(img/mp_h.png) no-repeat 16px 13px;
+}
+.nav .menu .nz span{
+	background: url(img/nz.png) no-repeat 16px 13px;
+}
+.nav .menu .nz:hover span{
+	background: url(img/nz_h.png) no-repeat 16px 13px;
+}
+.nav .menu .nanz span{
+	background: url(img/nanz.png) no-repeat 16px 13px;
+}
+.nav .menu .nanz:hover span{
+	background: url(img/nanz_h.png) no-repeat 16px 13px;
+}
+.nav .menu .xx span{
+	background: url(img/xx.png) no-repeat 16px 13px;
+}
+.nav .menu .xx:hover span{
+	background: url(img/xx_h.png) no-repeat 16px 13px;
+}
+.nav .menu .mz span{
+	background: url(img/mz.png) no-repeat 16px 13px;
+}
+.nav .menu .mz:hover span{
+	background: url(img/mz_h.png) no-repeat 16px 13px;
+}
+.nav .menu .xb span{
+	background: url(img/zb.png) no-repeat 16px 13px;
+}
+.nav .menu .xb:hover span{
+	background: url(img/xb_h.png) no-repeat 16px 13px;
+}
+.nav .menu .yd span{
+	background: url(img/yd.png) no-repeat 16px 13px;
+}
+.nav .menu .yd:hover span{
+	background: url(img/yd_h.png) no-repeat 16px 13px;
+}
+.nav .menu .ps span{
+	background: url(img/ps.png) no-repeat 16px 13px;
+}
+.nav .menu .ps:hover span{
+	background: url(img/ps_h.png) no-repeat 16px 13px;
+}
+.nav .menu .yt span{
+	background: url(img/yt.png) no-repeat 16px 13px;
+}
+.nav .menu .yt:hover span{
+	background: url(img/yt_h.png) no-repeat 16px 13px;
+}
+.nav .menu .ny span{
+	background: url(img/ny.png) no-repeat 16px 13px;
+}
+.nav .menu .ny:hover span{
+	background: url(img/ny_h.png) no-repeat 16px 13px;
+}
+.nav .menu ol li:hover{
+	background: #e5004f;
 }
