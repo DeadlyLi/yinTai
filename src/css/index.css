@@ -77,33 +77,41 @@
 .main .main_top{
 	width: 100%;
 	height: 505px;
-	padding: 0 37px;
 }
 .main .top_top{
-	width: 1196px;
+	width: 1190px;
 	height: 354px;
+	
+	margin: 0 auto;
 }
+
+
+
 .main .top_topL{
-	width: 909px;
+	width: 910px;
 	height: 322px;
-	background: #C4E3F3;
-	margin-right:10px ;
+	margin-right:3px ;
 	padding: 32px 0 0 0;
+	position: relative;
 }
 .main .top_topL ul{
 	width: 909px;
-	height: 45px;
+	height: 47px;
 }
 .main .top_topL ul li{
 	width: 303px;
-	line-height: 45px;
+	line-height: 47px;
 	border-bottom: 5px solid #333333;
 	float: left;
 	text-align: center;
 	font-size: 16px;
 	position: relative;
 }
-
+.main .top_topL ul li.hover{
+	border-bottom: 5px solid #de014e;
+	font-weight:bold ;
+	background: url(img/hong_J.png) no-repeat  center bottom;
+}
 
 .main .top_topR{
 	width: 270px;
@@ -111,4 +119,297 @@
 }
 .main .top_topR img{
 	margin-top: 54px;
+}
+.main .topL_bom{
+	width: 910px;
+	height: 262px;
+	padding-top:10px ;
+	position: absolute;
+	left: 0;
+	top:79px;
+	display: none;
+}
+.main .topL_bom .bom_tu,.main .topL_bom .bom_Tu{
+	border: 1px solid #eee;
+   	width: 220px;
+	height: 260px;
+	float: left;
+	margin-right: 7px;
+	position: relative;
+}
+.main .topL_bom img{
+	height: 260px;
+	width: 220px;
+}
+.main .topL_bom .bom_Tu{
+	margin-right: 0px;	
+}
+.main .topL_bom .border_top,.main .main_BaiH .big_box ul li .border_top{
+	position: absolute;
+	height: 1px;
+	width: 0;
+	background: #666666;
+	top: 0;
+	left: 0;
+}
+
+.main .topL_bom .border_right,.main .main_BaiH .big_box ul li .border_right{
+	position: absolute;
+	height: 0px;
+	width: 1px;
+	background: #666666;
+	bottom: 0;
+	right: 0;
+}
+.main .topL_bom .border_bottom,.main .main_BaiH .big_box ul li .border_bottom{
+	position: absolute;
+	height: 1px;
+	width: 0;
+	background: #666666;
+	bottom: 0;
+	right: 0;
+}
+.main .topL_bom .border_left,.main .main_BaiH .big_box ul li .border_left{
+	position: absolute;
+	height: 0;
+	width: 1px;
+	background: #666666;
+	top: 0;
+	left: 0;
+}
+.main .main_top .ad_Tu{
+	width: 1190px;
+	height: 80;
+	margin: 33px auto;
+}
+/*银泰百货专柜同款*/
+.main .main_BaiH{
+	width: 100%;
+	height: 770px;
+}
+.main .main_BaiH h1{
+	width: 1190px;
+	height: 43px;
+	margin: 0 auto;
+	background: url(img/yin_baiH.png) no-repeat;
+}
+.main .main_BaiH .BaiH_min{
+	width: 1170px;
+	height: 555px;
+	border: 1px solid #eeeeee;
+	margin: 0 auto;
+	padding: 10px;
+}
+.main .main_BaiH .img{
+	margin-right: 13px;
+}
+.main .main_BaiH .big_box{
+	height: 555px;
+	width: 815px;
+	position: relative;
+}
+.main .main_BaiH .big_box .ul{
+	height: 38px;
+	width: 815px;
+	border-bottom: 3px solid #333333;
+}
+.main .main_BaiH .big_box .ul li{
+	height: 38px;
+	width: 102px;
+	float: left;
+	line-height: 38px;
+	text-align: center;
+}
+.main .main_BaiH .big_box .ul li.active{
+	border-bottom: 3px solid #e70050;
+	font-weight:bold ;
+	background: url(img/hong_JJ.png) no-repeat  center bottom;
+}
+
+.main .main_BaiH .big_box .bai_Tab{
+	height: 515px;
+	width: 815px;
+	position: absolute;
+	left: 0;
+	top:41px;
+	background: #fff;
+}
+.main .main_BaiH .big_box .Tab_a{
+	height: 517px;
+	width: 815px;
+}
+.main .main_BaiH .big_box ul{
+	height: 517px;
+	width: 910px;
+	margin-top:5px ;
+}
+.main .main_BaiH .big_box ul li{
+	height: 250px;
+	width: 200px;
+	background: #fff;
+	float: left;
+	margin-right: 5px;
+	margin-top: 5px;
+	position: relative;
+	border: 1px solid #eeeeee;
+}
+.main .main_BaiH .big_box ul li a{
+	display: block;
+	width: 174px;
+	height: 200px;
+	padding: 0 0 0 24px;
+}
+.main .main_BaiH .big_box ul li p a{
+	display: inline;
+	padding: 0 0 0 6px;
+	margin-top: 8px;
+	text-decoration: underline;
+}
+.main .main_BaiH .big_box ul li p span{
+	margin-top: 8px;
+	color: red;
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+}
+.main .main_BaiH .big_box ul li p em{
+	margin-top: 8px;
+	position: absolute;
+	bottom: 8px;
+	right: 10px;
+	text-decoration: line-through;
+}
+
+.main .main_BaiH .BaiH_bom{
+	width: 1190px;
+	height: 80;
+	margin: 33px auto;
+}
+/*---时尚名品---*/
+.same{
+	width: 1190px;
+	margin: 0 auto;
+}
+.fashion{
+	width: 100%;
+	height: 455px;
+}
+.fashion p{
+	width: 100%;
+	height: 43px;
+}
+.fashion .fash_min{
+	width: 100%;
+	height: 372px;
+}
+.fashion .min_left{
+	width: 230px;
+	height: 372px;
+	background: #F2DEDE;
+	margin-right:8px ;
+}
+.fashion .list{
+	font-size: 0;
+	padding: 16px 0 0 8px;
+	width: 220px;
+	height: 172px;
+}
+.fashion .list li{
+	float: left;
+	margin: 0 5px 5px 0;
+}
+.fashion .list li a{
+	display: block;
+	width: 65px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	border: 1px solid #eeeeee;
+}
+.fashion .list li a:hover{
+	color: #fff;
+	background: #e70050;
+	border: 1px solid #e70050;
+}
+.fashion .small_pic{
+	width: 200px;
+	height: 141px;
+	margin-left:15px ;
+	background: #f2f2f2;
+	position: relative;
+}
+.fashion .small_pic a{
+	display: block;
+	width: 14px;
+	height: 139px;
+	position: absolute;
+	top:0;
+}
+.fashion .small_pic .prev{
+	left: 0;
+	background: url(img/prev01.png) no-repeat center;
+	
+}
+.fashion .small_pic .prev:hover{
+	background: url(img/prev02.png) no-repeat center;
+}
+.fashion .small_pic .next{
+	right: 0;
+	background: url(img/next01.png) no-repeat center;
+}
+.fashion .small_pic .next:hover{
+	right: 0;
+	background: url(img/next02.png) no-repeat center;
+}
+.fashion .small_pic .ul_pic{
+	width: 160px;
+	height: 116px;
+	position: absolute;
+	left:20px;
+	top:12px;
+	overflow: hidden;
+}
+.fashion .small_pic .ul_pic ul{
+	height: 116px;
+	width: 960px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+.fashion .small_pic .ul_pic ul li{
+	width: 160px;
+	height: 116px;
+	background: #28A4C9;
+	float: left;
+}
+.fashion  .ul_pic ul li dl{
+	height: 50px;
+	width: 75px;
+	float: left;
+	margin-top: 5px;
+}
+.fashion  .ul_pic ul li .dd{
+	margin-right:10px ;
+}
+.fashion .ul_pic ul li dl img{
+	height: 50px;
+	width: 75px;
+	margin-bottom: 5px;
+}
+.fashion .ul_pic ul li dl a{
+	display: inline;
+	position: relative;
+}
+
+.fashion .min_min{
+	width: 392px;
+	height: 372px;
+	background: #D9EDF7;
+	margin-right:8px ;
+}
+.fashion .min_right{
+	width: 552px;
+	height: 372px;
+	background: #E38D13;
 }
