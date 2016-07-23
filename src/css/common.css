@@ -213,6 +213,7 @@
 	width:1220px;
 	margin-top: 20px;
 	height: 39px;
+	position: relative;
 }
 .nav .search_bom{
 	margin-top: 12px;
@@ -273,6 +274,127 @@
 	background: #333;
 	z-index: 3;
 }
+.nav .menu ol li{
+	position: relative;
+}
+.nav .list{
+	position: absolute;
+	display: none;
+}
+.nav .one,.nav .three,.nav .four,.nav .five,.nav .six,.nav .seven,.nav .eight{
+	left: 247px;
+	top:39px;
+	width: 500px;
+	z-index: 100;
+}
+.nav .one{
+	display: block;
+}
+.nav .two,.nav .nine{
+	left: 247px;
+	top:87px;
+	width: 500px;
+	z-index: 100;
+}
+.nav .ten{
+	left: 247px;
+	top:60px;
+	width: 500px;
+	z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+.nav .list .list_L{
+	width: 270px;
+	background: #333333;
+	opacity: 0.9;
+	float: left;
+	padding: 10px 16px 20px 16px;
+	height: 392px;
+}
+.nav .list .list_L h5{
+	width: 270px;
+	border-bottom: 1px dotted #eee;
+	z-index: 1;
+	
+}
+.nav .list .list_L h5 span{
+	display: block;
+	width: 270px;
+	height: 16px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 8px 0 0 0;
+}
+.nav .list .list_L h5 a{
+	display: inline-block;
+	line-height: 28px;
+	margin-right: 9px;
+	color: #fff;
+	font-size: 12px;
+	font-weight:normal ;
+}
+.nav .list .list_L h5 a:hover{
+	color: #de014e;
+	
+}
+#a_red{
+	color: #de014e;
+	font-weight: bold;
+}
+
+
+.nav .list .list_R{
+	float: left;
+	width: 145px;
+	padding: 15px 0 22px 15px;
+	background: #000;
+	height: 385px;
+}
+.nav .list .list_R h4{
+	width: 130px;
+	height: 26px;
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 14px;
+	color: #fff;
+	border-bottom: 1px dotted #666;
+}
+p{
+	width: 125px;
+}
+.nav .list .list_R p a{
+	margin-right: 10px;
+	color: #fff;
+	float: left;
+	display: inline;
+	height: 24px;
+	line-height: 24px;
+}
+.nav .list .list_R p a:hover{
+	color: #de014e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .nav .menu ol li{
 	width:210px;
 	height: 46px;

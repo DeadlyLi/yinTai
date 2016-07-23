@@ -11,34 +11,36 @@ $(function(){
 	//通过定时器设置图片轮播
 	var timer = setInterval(fnNext,3000);
 	//鼠标移进轮播停止，两个点击键出现
-	$ul.on('mouseover',function(){
+	$ul.on('mouseenter',function(){
 		clearInterval(timer);
-		$prev.show();
-		$next.show();
+		$(this).find("span").show();
 		//鼠标移出，轮播继续，两按键消失
 	}).on('mouseleave',function(){
 		timer = setInterval(fnNext,3000);
-		$prev.hide();
-		$next.hide();
+		$(this).find("span").hide();
 	})
 	//鼠标移进按键，按键背景颜色改变
 	//点击左右键，图片向左/右播放
 	//左键
-	$prev.on('mouseenter',function(){
-		$(this).css('background','#de014e');
-	}).on('mouseleave',function(){
-		$(this).css('background','#000');
-	}).on('click',function(e){
+	$prev
+//	.on('mouseenter',function(){
+//		$(this).css('background','#de014e');
+//	}).on('mouseleave',function(){
+//		$(this).css('background','#000');
+//	})
+	.on('click',function(e){
 		index--;
 		fnChange();
 		e.preventDefault();
 	})
 	//右键
-	$next.on('mouseenter',function(){
-		$(this).css('background','#de014e');
-	}).on('mouseleave',function(){
-		$(this).css('background','#000');
-	}).on('click',function(e){
+	$next
+//	.on('mouseenter',function(){
+//		$(this).css('background','#de014e');
+//	}).on('mouseleave',function(){
+//		$(this).css('background','#000');
+//	})
+	.on('click',function(e){
 		index++;
 		fnChange();
 		e.preventDefault();
@@ -121,11 +123,21 @@ $(function(){
 	//获取页面元素
 	var $baiTab = $bai_H.find('.bai_Tab');
 	var $baiLi = $bai_H.find('.ul li');
+	$baiTab.eq(0).show().siblings('.bai_Tab').hide();
 	$baiLi.on('mouseenter',function(){
 		var now = $(this).index();
 		$(this).addClass('active').siblings().removeClass('active');
 		$baiTab.eq(now).show().siblings('.bai_Tab').hide();
 	})
+	
+	//鼠标移进改变透明度
+	var $a = $baiTab.find('.Tab_a a');
+	$a.on('mouseenter',function(){
+		$(this).css({opacity:0.7});
+	}).on('mouseleave',function(){
+		$(this).css({opacity:1});
+	})
+	
 	
 	//通过改变left值的小轮播图(无缝轮播)
 	//获取页面元素
@@ -141,28 +153,132 @@ $(function(){
 //		console.log($width)
 	$next.on('click',function(){
 		//获取元素的每一次的left值
-		var Left = parseInt($ul_pic.css('left'));
+		var Left = parseInt($(this).parent('.small_pic').find('ul').css('left'));
 		if(-Left>($width*3)){
 			Left = -$width;
-			$ul_pic.css({'left':-$width})
+			$(this).parent('.small_pic').find('ul').css({'left':-$width})
 		}
-		console.log(Left)
+//		console.log(Left)
 //		console.log($left)
-		$ul_pic.animate({
+		$(this).parent('.small_pic').find('ul').stop(true).animate({
 			left:-$width+Left
 		})
 	})
 	$prev.on('click',function(){
 		//获取元素的每一次的left值
-		var Left = parseInt($ul_pic.css('left'));
-		if(Left>0){
-			Left = -$width*5;
-			$ul_pic.css({'left':-$width*5})
+		var Left = parseInt($(this).parent('.small_pic').find('ul').css('left'));
+		if(Left>=0){
+			Left = -$width*3;
+			$(this).closest('.small_pic').find('ul').css({'left':-$width*3})
 		}
-		console.log(Left)
+//		console.log(Left)
 //		console.log($left)
-		$ul_pic.animate({
+		$(this).closest('.small_pic').find('ul').stop(true).animate({
 			left:$width+Left
 		})
 	})	
+	
+	//简单点击切换图
+	//获取页面元素
+	var $min_M = $('.same .min_min');
+	var $min_Li = $min_M.find('li');
+	var $min_Left = $min_M.find('.left');
+	var $min_Right = $min_M.find('.right');
+	var $dod = $min_M.find('em');
+	var i = 0;
+	//初始化
+	$min_Li.eq(0).show().siblings().hide();
+	//鼠标移进两按键显示，移出两按键隐藏
+	$min_M.on('mouseenter',function(){
+		$(this).find('span').stop(true).animate({width:30},100);
+	}).on('mouseleave',function(){
+		$(this).find('span').stop(true).animate({width:0},100);
+	})
+	
+	//点击左键
+	$min_Left.on('click',function(){
+		i--;
+		fnTab();
+		$(this).closest('.min_min').find('li').eq(i).show().siblings().hide();
+		$(this).closest('.min_min').find('em').eq(i).addClass('cctv').siblings().removeClass('cctv');
+	})
+	//点击右键
+	$min_Right.on('click',function(){
+		i++;
+		fnTab();
+		$(this).closest('.min_min').find('li').eq(i).show().siblings().hide();
+		$(this).closest('.min_min').find('em').eq(i).addClass('cctv').siblings().removeClass('cctv');
+	})
+	//点击小圆点切换
+	$dod.on('click',function(){
+		i = $(this).index();
+		fnTab();
+		$(this).closest('.min_min').find('li').eq(i).show().siblings().hide();
+		$(this).addClass('cctv').siblings().removeClass('cctv');
+	})
+	//封装切换状态
+	function fnTab(){
+		if(i>1){
+			i=0;
+		}
+		if(i<0){
+			i=1;
+		}
+
+	}
+	//边框运动
+	//获取页面元素
+	var $yan_Y = $('.fashion .min_right ol');
+	fnMove($yan_Y,271,181);
+	
+	//楼梯
+	/*
+		思路：
+			1、给window绑定scroll事件
+				1）当滚动到一定距离时，显示导航条
+				2）当滚动到楼层对应位置时，高亮显示导航条对应楼层
+			2、点击导航条，滚动到相应的楼层
+			3、返回顶部
+	 */
+		var $nav = $('.setp');
+		var $floor = $('.same .fashion');
+		
+		// 1、给window绑定scroll事件
+		$(window).on('scroll',function(){
+			// 获取滚动过的距离
+			var scrollTop = $(window).scrollTop();
+	
+			// 1）当滚动到一定距离时，显示导航条
+			if(scrollTop >= 1200){
+				$nav.fadeIn();
+			}else if(scrollTop < 1200){
+				$nav.fadeOut();
+			}
+			if(scrollTop < $floor.eq(0).offset().top-100){
+				$nav.find('a').removeClass('nav');
+			}
+	
+			// 2）当滚动到楼层对应位置时，高亮显示导航条对应楼层
+			// 目的：获得index值
+			$floor.each(function(idx,ele){
+				if(scrollTop >= $(ele).offset().top-20&& scrollTop <=$(ele).offset().top + $(ele).outerHeight()/2-10){
+					$nav.find('a').removeClass('nav').eq(idx).addClass('nav');
+					return false;
+				}
+			});
+		});
+	
+		// 2、点击导航条，滚动到相应的楼层
+		$nav.on('click','a',function(){
+			// 3、返回顶部
+			if($(this).hasClass('last')){
+				// $(window).scrollTop(0);
+				$('html,body').animate({scrollTop:0});
+				return;
+			}
+			var index = $(this).closest('li').index();
+			var scrollTop = $floor.eq(index).offset().top;
+			// $(window).scrollTop(scrollTop);
+			$('html,body').animate({scrollTop:scrollTop});
+		});
 })
