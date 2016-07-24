@@ -52,7 +52,7 @@
 	left:50%;
 	bottom:22px;
 	margin-left:-62px ;
-	z-index: 3;
+	z-index: 1;
 }
 .banner em{
 	display: block;
@@ -559,82 +559,7 @@
 	float: right;
 	background: url(img/kan.png) no-repeat 0 -1px;
 }
-.foot{
-	width: 100%;
-	height: 315px;
-	margin-top:54px ;
-}
-.footer{
-	width: 1188px;
-	height: 290px;
-	margin: 0 auto;
-}
-.footer .footer_top{
-	height: 88px;
-	width: 1188px;
-	border: 1px solid #eee;
-}
-.footer .footer_top img{
-	height: 88px;
-	width: 1188px;
-}
-.footer .footer_min{
-	height: 12px;
-	width: 880px;
-	margin: 40px auto;
-}
-.footer .footer_min li{
-	float: left;
-	height: 12px;
-	width: 72px;
-	border-right: 1px solid #999;
-}
-.footer .footer_min li a{
-	float: left;
-	height: 12px;
-	width: 72px;
-	display: block;
-	line-height: 12px;
-	text-align: center;
-}
-.footer .footer_mid{
-	height: 45px;
-	width: 100%;
-	position: relative;
-}
-.footer .footer_mid img{
-	position: absolute;
-	left: 50%;
-	top:6px;
-	margin-left:-271px;
-}
-.footer .footer_bom{
-	width: 100%;
-	margin-top: 20px;
-}
-.footer .footer_bom ul{
-	height: 40px;
-	width: 330px;
-	margin: 0 auto;	
-}
-.footer .footer_bom ul li{
-	margin-top:5px ;
-	float: left;
-	height: 40px;
-	width: 112px;
-	border: 1px solid #fd8510;
-	border-radius: 4px;
-	margin-right: 28px;
-}
-.footer .footer_bom ul li img{
-	height: 40px;
-	width: 112px;
-}
-.footer .footer_bom p{
-	float: left;
-	margin-top: -3px;
-	width: 12px;
-}
+
 /*楼梯*/
 .setp{
 	position: fixed;
