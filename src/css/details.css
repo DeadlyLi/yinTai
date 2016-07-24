@@ -1,0 +1,154 @@
+/*---重置样式---*/
+.nav .menu ol{
+	display:none;
+}
+.box{
+	width: 100%;
+	background: #eeeeee;
+}
+.details{
+	width: 1190px;
+	margin: 0 auto;
+}
+.details .details_top{
+	width: 1190px;
+	height: 46px;
+}
+/*放大镜部位样式*/
+.Magnifier{
+	width: 1190px;
+	height: 542px;
+	background: #fff;
+}
+.details .details_mid{
+	width: 1190px;
+	margin-top: 10px;
+	overflow: hidden;
+	background: #f4f4f4;
+}
+.details .details_mid .det_left{
+	width: 990px;
+	background: #fff;
+	
+}
+.details .details_mid .det_right{
+	width: 190px;
+}
+.details .left_top{
+	width: 990px;
+	height: 30px;
+	background: #999999;
+	position: absolute;
+}
+.details .left_top ul{
+	height: 30px;
+	width: 484px;
+}
+.details .left_top li{
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	width: 120px;
+	border-right: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+}
+.details .left_top li.tab{
+	background: #b7ab91;
+}
+.details .left_top .s_dan{
+	position: relative;	
+	width: 138px;
+}
+.details .left_top .s_dan a{
+	display: block;
+	width: 138px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #fff;
+	margin-left:238px ;
+	text-align: center;
+}
+.details .s_dan .gongZH{
+	width: 138px;
+	height: 160px;
+	position: absolute;
+	background: #fff;
+	left: 237px;
+	top:0;
+	display: none;
+}
+.details .s_dan .gongZH img{
+	width: 110px;
+	margin: 10px 14px;
+}
+.details .s_dan .gongZH p{
+	width: 138px;
+	height: 30px;
+	color: red;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+.details .left_top .join_car a{
+	display: block;
+	width: 130px;
+	height: 30px;
+	background: url(img/join_car.png) no-repeat;
+}
+.details .det_left dl{
+	width: 920px;
+	margin: 35px auto;
+	overflow: hidden;
+}
+.details .det_left dl dt{
+	display: none;
+}
+.details .det_left dl dt.jietu{
+	display: block;
+	
+}
+.details .details_bom{
+	background: #f4f4f4;
+}
+.details .details_bom .word{
+	width: 1190px;
+	height: 48px;
+	border-bottom: 2px solid #000;
+	
+}
+.details .details_bom .word span{
+	display: block;
+	width:80px ;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	float: left;
+	
+}
+.details .details_bom .word em{
+	display: block;
+	width:18px ;
+	height: 18px;
+	float: right;
+	background: url(img/s_chu.png) no-repeat;
+	margin-right: 12px;
+	margin-top: 23px;
+}
+.details .details_bom .connet{
+	padding: 20px 0;
+	
+}
+.go_Top{
+	width: 31px;
+	height: 42px;
+	background: url(img/go-top-n.png) no-repeat;
+	position: fixed;
+	right: 5px;
+	bottom: 200px;
+	display: none;
+}
+.go_Top:hover{
+	background: url(img/go-top-n.png) no-repeat 0 -42px;
+}
